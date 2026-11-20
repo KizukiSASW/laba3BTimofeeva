@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Справочник пользователей</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Справочник пользователей</h1>
+
+    <!-- Панель управления -->
+    <div class="toolbar">
+      <button id="loadUsersBtn" type="button">Загрузить пользователей</button>
+
+      <div class="search-group">
+        <label for="searchInput">Поиск по имени</label>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Введите имя…"
+          autocomplete="off"
+          disabled
+        >
+      </div>
+    </div>
+
+    <!-- Область сообщений (загрузка / успех / ошибка) -->
+    <div id="messageArea" class="message-area" role="status" aria-live="polite"></div>
+
+    <!-- Список пользователей -->
+    <section class="users-section">
+      <h2>Пользователи</h2>
+      <div id="usersList" class="users-list"></div>
+    </section>
+
+    <!-- Область публикаций выбранного пользователя -->
+    <section class="posts-section">
+      <h2>Публикации пользователя</h2>
+      <div id="postsArea" class="posts-area">
+        <p class="placeholder">Выберите пользователя и нажмите «Показать публикации».</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
